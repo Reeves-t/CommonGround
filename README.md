@@ -1,12 +1,70 @@
-# React + Vite
+# CommonGround 🌍
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**CommonGround** is an interactive global news app designed to inspire social awareness and make world events accessible, engaging, and habit-forming. The app uses a 3D globe interface to help users explore trending stories across the world — one country at a time.
 
-Currently, two official plugins are available:
+## 🧠 Vision
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+In a world overwhelmed by divisive media and doomscrolling, CommonGround is a counter-movement:  
+A daily ritual of curiosity, global empathy, and digital minimalism.
 
-## Expanding the ESLint configuration
+> “Everything is minimal in the grand scheme of life.”  
+> Let’s explore what matters — together.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🔑 Core Features
+
+- **🌍 3D Interactive Globe** – Tap any country to see its top news.
+- **🔥 Trending Heat Map** – Visualize global activity and rising headlines.
+- **📚 Save Article** – Bookmark stories for later reading.
+- **📅 World Streak** – Earn rewards by viewing news from a new country daily.
+- **🌓 Dark Mode** – Available to all users for comfortable night reading.
+
+---
+
+## 🧪 In Progress
+
+- Interactive geography quizzes (School-friendly version)
+- User settings & personalization
+- Licensing for media orgs & classrooms
+
+---
+
+## 🚀 Getting Started (Dev)
+
+### Prerequisites
+
+- Node.js
+- React
+- Three.js or React-Globe (for globe interaction)
+- Tailwind CSS (UI styling)
+- GitHub account
+
+### Setup
+
+```bash
+git clone https://github.com/reeves-t/commonground.git
+cd commonground
+npm install
+npm run dev
+```
+
+### Dev Notes
+
+- Keep features minimal at launch
+- No comments/chat to avoid toxicity
+- Clean, intuitive UI preferred over clutter
+
+---
+
+## 💼 Built By
+
+**Darrell Taylor**  
+Chemical Operator turned Software Creator  
+Driven by a vision to elevate minds, one country at a time.
+
+---
+
+## 🗺️ License
+
+TBD — Will likely use a permissive open-source license or private licensing model for education/media.
