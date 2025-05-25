@@ -1,70 +1,195 @@
-# CommonGround 🌍
+# CommonGround - Product Requirements Document
 
-**CommonGround** is an interactive global news app designed to inspire social awareness and make world events accessible, engaging, and habit-forming. The app uses a 3D globe interface to help users explore trending stories across the world — one country at a time.
+## Overview
+CommonGround is a web-based platform designed to broaden users' global perspectives through an interactive 3D Earth interface combined with curated news content. The platform aims to combat algorithm bubbles and encourage intentional exploration of world events by providing a geographically-centered news discovery experience.
 
-## 🧠 Vision
-
-In a world overwhelmed by divisive media and doomscrolling, CommonGround is a counter-movement:  
-A daily ritual of curiosity, global empathy, and digital minimalism.
-
-> “Everything is minimal in the grand scheme of life.”  
-> Let’s explore what matters — together.
+### Mission Statement
+To provide users with a comprehensive, unbiased window into global events through an intuitive geographic interface, promoting informed global citizenship and cross-cultural understanding.
 
 ---
 
-## 🔑 Core Features
+## Core Features
 
-- **🌍 3D Interactive Globe** – Tap any country to see its top news.
-- **🔥 Trending Heat Map** – Visualize global activity and rising headlines.
-- **📚 Save Article** – Bookmark stories for later reading.
-- **📅 World Streak** – Earn rewards by viewing news from a new country daily.
-- **🌓 Dark Mode** – Available to all users for comfortable night reading.
+### 1. Interactive 3D Globe Interface
+- Responsive, high-performance 3D Earth visualization using Three.js
+- Smooth rotation and zoom capabilities
+- Clear country boundaries with hover states
+- Interactive country selection through clicking
+- Optimized performance for various devices and browsers
 
----
+### 2. News Integration
+- Dual-column news presentation system:
+  - Left column: Global headlines and major stories
+  - Right column: Country-specific news for selected region
+- Real-time content updates when selecting different countries
+- Clear attribution and sourcing for all news content
+- Support for multiple trusted news sources
+- Timestamp and relevance indicators for all articles
 
-## 🧪 In Progress
+### 3. Search and Navigation
+- Country search functionality with autocomplete
+- Topic-based filtering system
+- Date range selection for historical context
+- Advanced filtering options (source, language, relevance)
+- Clear visual feedback for search results
 
-- Interactive geography quizzes (School-friendly version)
-- User settings & personalization
-- Licensing for media orgs & classrooms
-
----
-
-## 🚀 Getting Started (Dev)
-
-### Prerequisites
-
-- Node.js
-- React
-- Three.js or React-Globe (for globe interaction)
-- Tailwind CSS (UI styling)
-- GitHub account
-
-### Setup
-
-```bash
-git clone https://github.com/reeves-t/commonground.git
-cd commonground
-npm install
-npm run dev
-```
-
-### Dev Notes
-
-- Keep features minimal at launch
-- No comments/chat to avoid toxicity
-- Clean, intuitive UI preferred over clutter
+### 4. Engagement Features
+- **World Streak**: Simple daily check-in system  
+  - Tracks consecutive days of global news exploration  
+  - No points or competitive elements  
+  - Focus on personal growth and consistency
+- **Daily Compass**: Thoughtful daily prompt  
+  - Encourages reflection on global issues  
+  - Provides context for important ongoing stories  
+  - Highlights underreported regions or topics
 
 ---
 
-## 💼 Built By
+## UI/UX Goals
 
-**Darrell Taylor**  
-Chemical Operator turned Software Creator  
-Driven by a vision to elevate minds, one country at a time.
+### Visual Design
+- Clean, professional interface
+- High contrast for readability
+- Minimal animations - function over form
+- Consistent typography and color scheme
+- Accessible design meeting WCAG 2.1 standards
+
+### User Experience
+- Intuitive navigation without tutorial requirements
+- Clear visual hierarchy of information
+- Responsive design for all screen sizes
+- Fast loading times and smooth transitions
+- Minimal clicks to access key information
 
 ---
 
-## 🗺️ License
+## Tech Stack
 
-TBD — Will likely use a permissive open-source license or private licensing model for education/media.
+### Frontend
+- React.js for UI components
+- Three.js for 3D globe visualization
+- TypeScript for type safety
+- Tailwind CSS for styling
+- Redux for state management
+
+### Backend
+- Node.js/Express server
+- PostgreSQL database
+- Redis for caching
+- AWS infrastructure
+
+### External Services
+- News API integration
+- Geographic data services
+- Authentication service
+- Analytics platform
+
+---
+
+## Future Features
+
+### Near-term (3–6 months)
+- Language translation support
+- Customizable news preferences
+- Offline reading capability
+- Email digest options
+- Advanced search filters
+
+### Mid-term (6–12 months)
+- Historical news timeline
+- Regional comparison tools
+- Topic tracking across regions
+- Custom news alerts
+- API access for researchers
+
+---
+
+## Stretch Goals (Long-term Vision)
+- Machine learning for content relevance
+- Natural language processing for context
+- Cross-border story connections
+- Academic/research partnerships
+- Public journalism initiatives
+
+---
+
+## Tone and Philosophy
+
+### Editorial Principles
+- Commitment to factual reporting
+- Source diversity and verification
+- Bias awareness and mitigation
+- Transparency in content selection
+- Focus on substantive coverage
+
+### Platform Values
+- Information over entertainment
+- Understanding over engagement
+- Quality over quantity
+- Global perspective over local bias
+- User privacy and data protection
+
+### Anti-Goals
+- No clickbait or sensationalism
+- No social media integration
+- No gamification elements
+- No advertising in content
+- No engagement manipulation
+
+---
+
+## Success Metrics
+
+### Key Performance Indicators
+- Daily active users
+- Geographic diversity of accessed content
+- Time spent reading articles
+- Return user rate
+- Feature adoption rates
+
+### Quality Metrics
+- Source diversity
+- Content freshness
+- Translation accuracy
+- System performance
+- User feedback scores
+
+---
+
+## Development Phases
+
+### Phase 1: MVP (1–3 months)
+- Core globe interface
+- Basic news integration
+- Country selection
+- Essential search features
+
+### Phase 2: Enhancement (3–6 months)
+- Advanced filtering
+- World Streak implementation
+- Performance optimization
+- Mobile responsiveness
+
+### Phase 3: Expansion (6–12 months)
+- Daily Compass feature
+- Advanced search capabilities
+- Language support
+- Custom preferences
+
+---
+
+## Technical Requirements
+
+### Performance
+- Page load time < 3 seconds
+- Globe interaction at 60 FPS
+- News update latency < 1 second
+- Mobile-first responsive design
+- Offline capability for core features
+
+### Security
+- End-to-end encryption
+- Secure user authentication
+- Data privacy compliance
+- Regular security audits
+- Backup and recovery systems
