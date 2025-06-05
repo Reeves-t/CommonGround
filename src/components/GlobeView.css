@@ -1,0 +1,194 @@
+/* GlobeView.css */
+
+.globe-bg {
+  width: 100vw;
+  height: 100vh;
+  background: #1a1a1a;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 4rem; /* Add padding for collapsed nav */
+}
+
+.globe-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-title {
+  position: absolute;
+  top: 12px;
+  left: calc(4rem + 16px); /* Adjust left position for nav */
+  color: #FFFFFF;
+  font-size: 1.25rem;
+  margin: 0;
+  z-index: 1000;
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  text-shadow: none;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.6));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.app-title:hover {
+  opacity: 0.9;
+}
+
+.search-bar-container {
+  width: 100%;
+  padding: 0.75rem 2rem;
+  position: absolute;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+}
+
+.search-bar {
+  width: 40%;
+  max-width: 500px;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  border: none;
+  background-color: #1a1c22;
+  color: white;
+  font-size: 0.875rem;
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.15);
+  transition: box-shadow 0.3s ease;
+}
+
+.search-bar::placeholder {
+  color: #888;
+}
+
+.search-bar:focus {
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.25);
+}
+
+/* Globe styling */
+canvas {
+  max-width: 100%;
+  max-height: 100vh;
+  background: transparent;
+}
+
+/* Custom scrollbar styling */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Panel styling */
+.popup-panel, .left-panel {
+  position: fixed;
+  background-color: rgba(15, 15, 20, 0.85);
+  z-index: 10;
+  overflow-y: auto;
+  backdrop-filter: blur(10px);
+}
+
+.popup-panel {
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: 100vh;
+  padding: 24px;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.5);
+  animation: slideInRight 0.3s ease-out;
+}
+
+.left-panel {
+  left: 0;
+  width: 250px;
+  padding: 16px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+  animation: slideInLeft 0.3s ease-out;
+}
+
+/* Loading spinner */
+.loading-spinner {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Animation variants */
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.article-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  transition: all 0.2s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+.article-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+
