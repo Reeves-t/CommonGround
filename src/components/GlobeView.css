@@ -18,6 +18,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-left: 4rem; /* Add padding for collapsed nav */
 }
 
 .app-title {
@@ -60,12 +61,13 @@
   padding: 0.5rem 1rem;
   border-radius: 9999px;
   border: none;
-  background-color: #1a1c22;
+  background-color: rgba(26, 28, 34, 0.5);
   color: white;
   font-size: 0.875rem;
   outline: none;
   box-shadow: 0 0 10px rgba(0, 255, 255, 0.15);
   transition: box-shadow 0.3s ease;
+  backdrop-filter: blur(8px);
 }
 
 .search-bar::placeholder {
@@ -103,20 +105,17 @@ canvas {
 }
 
 /* Panel styling */
-.popup-panel, .left-panel {
-  position: fixed;
-  background-color: rgba(15, 15, 20, 0.85);
-  z-index: 10;
-  overflow-y: auto;
-  backdrop-filter: blur(10px);
-}
-
 .popup-panel {
+  position: fixed;
   top: 0;
   right: 0;
   width: 400px;
   height: 100vh;
   padding: 24px;
+  background-color: rgba(15, 15, 20, 0.85);
+  backdrop-filter: blur(10px);
+  z-index: 10;
+  overflow-y: auto;
   box-shadow: -2px 0 10px rgba(0, 0, 0, 0.5);
   animation: slideInRight 0.3s ease-out;
 }
@@ -188,6 +187,34 @@ canvas {
   background: rgba(255, 255, 255, 0.08);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Add animation keyframes for the background elements */
+@keyframes pulse {
+  0% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+}
+
+.animate-pulse {
+  animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.delay-1000 {
+  animation-delay: 1s;
+}
+
+.delay-2000 {
+  animation-delay: 2s;
 }
 
 
